@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">HarryPotter</string>
+
+    <!--Información de la pantalla de inicio-->
+    <string name="title_app">Proyecto 2</string>
+    <string name="versiom">Versión 1.0.0</string>
+    <string name="author">Reyes González Agustín Óscar</string>
+
+
+
 </resources>
