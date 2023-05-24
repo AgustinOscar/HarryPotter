@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Imágenes -->
+    <dimen name="shield">200sp</dimen>
+
+    <!-- Letreros -->
+    <dimen name="letterSizeTitle">35sp</dimen>
+    <dimen name="letterSizeVersion">27sp</dimen>
+    <dimen name="letterSizeSelection">40sp</dimen>
+
+</resources>
