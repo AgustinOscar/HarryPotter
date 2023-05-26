@@ -2,6 +2,7 @@
 <resources>
     <!-- Imágenes -->
     <dimen name="shield">200sp</dimen>
+    <dimen name="selection_type">250dp</dimen>
 
     <!-- Letreros -->
     <dimen name="letterSizeTitle">35sp</dimen>

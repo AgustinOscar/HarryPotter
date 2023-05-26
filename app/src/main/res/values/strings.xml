@@ -8,6 +8,8 @@
 
     <!-- Instrucciones -->
     <string name="selection">Seleccione el tipo de personaje</string>
+    <string name="type_student">Estudiantes</string>
+    <string name="type_staff">Staff Hogwarts</string>
 
 
 </resources>
