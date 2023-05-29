@@ -8,5 +8,7 @@
     <dimen name="letterSizeTitle">35sp</dimen>
     <dimen name="letterSizeVersion">27sp</dimen>
     <dimen name="letterSizeSelection">40sp</dimen>
+    <dimen name="letterSizeCharacter">30sp</dimen>
+    <dimen name="letterSizeActor">15sp</dimen>
 
 </resources>
