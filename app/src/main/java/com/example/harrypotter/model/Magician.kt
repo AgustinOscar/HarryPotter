@@ -1,9 +1,17 @@
 package com.example.harrypotter.model
 
+import com.google.gson.annotations.SerializedName
+
 //Presentación del item.
 data class Magician(
-    val id: Long,
-    val name: String,
-    val actor: String,
-    val id_string: String
+
+    //Adecuaciones (cómo lo leo y cómo lo utilizaré en el código)
+    @SerializedName("id")
+    val id: Long?,
+
+    @SerializedName("name")
+    val name: String?,
+
+    @SerializedName("actor")
+    val actor: String?
 )

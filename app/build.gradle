@@ -38,6 +38,9 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.core:core-ktx:+'
+    implementation 'androidx.core:core-ktx:+'
+
 
     //Definición de versiones.
     def retrofitVersion = '2.9.0'

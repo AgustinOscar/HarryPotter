@@ -9,6 +9,11 @@ import com.example.harrypotter.databinding.ItemCharacterBinding
 import com.example.harrypotter.model.Magician
 import java.text.FieldPosition
 
+class Adapter(val context: Context, val data: ArrayList<Magician>) {
+
+}
+
+/*
 class Adapter(val context: Context, val data: ArrayList<Magician>): BaseAdapter() {
 
     val inflater: LayoutInflater = LayoutInflater.from(context)
@@ -33,4 +38,4 @@ class Adapter(val context: Context, val data: ArrayList<Magician>): BaseAdapter(
         return binding.root
     }
 
-}
+}*/

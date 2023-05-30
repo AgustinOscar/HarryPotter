@@ -6,6 +6,7 @@ import com.example.harrypotter.Adapter
 import com.example.harrypotter.databinding.ActivityMainBinding
 import com.example.harrypotter.utils.message
 import com.example.harrypotter.model.Magician
+import com.example.harrypotter.utils.Constants
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
@@ -24,13 +25,16 @@ class MainActivity : AppCompatActivity() {
 
         val data = ArrayList<Magician>()
 
+        Constants.BASE_URL
+
+        /*
         for (i in 1 .. 10) {
             val magicianTmp = Magician(i + Random.nextLong(1000),
                 "Personaje $i", "Actor $i", "PPPPPPPP")
             data.add(magicianTmp)
-        }
+        }*/
 
-        val my_adapter = Adapter(this, data)
+        //val my_adapter = Adapter(this, data)
 
         //binding.rvItems.adapter = my_adapter
 
