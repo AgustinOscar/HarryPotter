@@ -59,6 +59,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="130dp" />
 
+    <!--
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="89dp"
@@ -68,6 +69,23 @@
         app:layout_constraintStart_toStartOf="@+id/viewBackground"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:srcCompat="@drawable/app_icon" />
+    -->
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivCharacter"
+        android:layout_width="70dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="@+id/viewBackground"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:riv_corner_radius="10dp"
+
+        />
+
 
     <TextView
         android:id="@+id/tvMagician"
@@ -88,14 +106,21 @@
         android:id="@+id/tvActor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nombre del actor"
         android:fontFamily="@font/alike_angular"
+        android:text="Nombre del actor"
         android:textColor="@android:color/holo_orange_light"
         android:textSize="@dimen/letterSizeActor"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/tvMagician" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="160dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,7 +28,7 @@
             </intent-filter>
         </activity> <!-- Actividad principal -->
         <activity
-            android:name=".MainActivity"
+            android:name=".view.activities.MainActivity"
             android:exported="false"></activity>
         <meta-data
             android:name="preloaded_fonts"

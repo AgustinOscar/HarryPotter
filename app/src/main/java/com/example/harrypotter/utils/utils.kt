@@ -1,4 +1,4 @@
-package com.example.harrypotter
+package com.example.harrypotter.utils
 
 import android.app.Activity
 import android.widget.Toast

@@ -1,9 +1,10 @@
-package com.example.harrypotter
+package com.example.harrypotter.view.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.harrypotter.databinding.ActivityLauncherBinding
+import com.example.harrypotter.Adapter
 import com.example.harrypotter.databinding.ActivityMainBinding
+import com.example.harrypotter.utils.message
 import com.example.harrypotter.model.Magician
 import kotlin.random.Random
 
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         for (i in 1 .. 10) {
             val magicianTmp = Magician(i + Random.nextLong(1000),
-                "Personaje $i", "Actor $i")
+                "Personaje $i", "Actor $i", "PPPPPPPP")
             data.add(magicianTmp)
         }
 
