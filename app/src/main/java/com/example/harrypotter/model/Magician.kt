@@ -13,5 +13,8 @@ data class Magician(
     val name: String?,
 
     @SerializedName("actor")
-    val actor: String?
+    val actor: String?,
+
+    @SerializedName("image")
+    val image: String?
 )

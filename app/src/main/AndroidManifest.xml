@@ -15,11 +15,11 @@
         android:theme="@style/Theme.HarryPotter"
         tools:targetApi="31">
         <activity
-            android:name=".SelectionMenu"
+            android:name=".view.activities.SelectionMenu"
             android:exported="false" />
         <!-- Ventana de inicio -->
         <activity
-            android:name=".Launcher"
+            android:name=".view.activities.Launcher"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

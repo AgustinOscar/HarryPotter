@@ -1,6 +1,5 @@
-package com.example.harrypotter
+package com.example.harrypotter.view.activities
 
-import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.harrypotter.databinding.ActivityLauncherBinding
@@ -9,6 +8,7 @@ import kotlin.concurrent.thread
 import android.content.Intent
 import android.media.MediaPlayer
 import android.util.Log
+import com.example.harrypotter.R
 
 class Launcher : AppCompatActivity() {
 

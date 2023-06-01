@@ -1,4 +1,4 @@
-package com.example.harrypotter
+package com.example.harrypotter.view.adapters
 
 import android.content.Context
 import android.view.LayoutInflater

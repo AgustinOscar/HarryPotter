@@ -1,9 +1,11 @@
-package com.example.harrypotter
+package com.example.harrypotter.view.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.example.harrypotter.R
 
 class SelectionMenu : AppCompatActivity() {
 
@@ -15,12 +17,19 @@ class SelectionMenu : AppCompatActivity() {
 
     fun click_students(view: View) {
         selection = "students"
-        Log.d("LOGTAG", "Students")
-
+        viewCharacters()
     }
 
     fun click_staff(view: View) {
         selection = "staff"
-        Log.d("LOGTAG", "Staff")
+        viewCharacters()
+    }
+
+    fun viewCharacters() {
+        val intent = Intent(this, MainActivity::class.java)
+        val bundle = Bundle()
+        bundle.putString("selection", selection)
+        intent.putExtras(bundle)
+        startActivity(intent)
     }
 }
