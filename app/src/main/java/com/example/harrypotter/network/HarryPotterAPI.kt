@@ -2,6 +2,7 @@ package com.example.harrypotter.network
 
 import com.example.harrypotter.model.Magician
 import com.example.harrypotter.model.MagicianDetail
+import com.example.harrypotter.utils.Constants
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -18,11 +19,11 @@ interface HarryPotterAPI {
     ): Call<MagicianDetail>
 
     //Obtención de estudiantes.
-    @GET("api/characters/students")
+    @GET(Constants.STUDENTS_END_POINT)
     fun getStudentsListApiary(): Call<ArrayList<Magician>>
 
     //Obtención de staff.
-    @GET("api/characters/staff")
+    @GET(Constants.STAFF_END_POINT)
     fun getStaffListApiary(): Call<ArrayList<Magician>>
 }
     /*

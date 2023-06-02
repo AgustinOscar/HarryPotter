@@ -7,7 +7,7 @@ data class Magician(
 
     //Adecuaciones (cómo lo leo y cómo lo utilizaré en el código)
     @SerializedName("id")
-    val id: Long?,
+    val id: String?,
 
     @SerializedName("name")
     val name: String?,

@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.harrypotter.adapters.MagicianAdapter
 import com.example.harrypotter.databinding.ActivityMainBinding
 import com.example.harrypotter.utils.message
 import com.example.harrypotter.model.Magician
@@ -34,7 +36,6 @@ class MainActivity : AppCompatActivity() {
 
 
         if (bundle != null) {
-
             //Se obtiene el valor de "students" ó "staff"
             val selection = bundle.getString("selection", "")
             Log.d("LOGTAG", selection)
@@ -57,6 +58,7 @@ class MainActivity : AppCompatActivity() {
 
             call.enqueue(object: Callback<ArrayList<Magician>> {
 
+                //Función de conexión a la API exitosa.
                 override fun onResponse(
                     call: Call<ArrayList<Magician>>,
                     response: Response<ArrayList<Magician>>
@@ -64,8 +66,15 @@ class MainActivity : AppCompatActivity() {
                     binding.pbConnection.visibility = View.GONE //Se quita el símbolo de cargando.
                     Log.d("LOGTAG", "Respuesta del servidor: ${response.toString()}")
                     Log.d("LOGTAG", response.body().toString())
+
+
+                    //Llenado de los datos del response.
+                    binding.rvItems.layoutManager = LinearLayoutManager(this@MainActivity)
+                    binding.rvItems.adapter = MagicianAdapter(this@MainActivity,
+                        response.body()!!)
                 }
 
+                //Función de conexión a la API no exitosa.
                 override fun onFailure(call: Call<ArrayList<Magician>>, t: Throwable) {
                     Toast.makeText(this@MainActivity,
                         "No hay conexión...", Toast.LENGTH_SHORT).show()
