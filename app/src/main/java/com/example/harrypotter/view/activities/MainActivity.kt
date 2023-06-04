@@ -1,5 +1,6 @@
 package com.example.harrypotter.view.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,11 +9,13 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.harrypotter.adapters.MagicianAdapter
 import com.example.harrypotter.databinding.ActivityMainBinding
-import com.example.harrypotter.utils.message
+
 import com.example.harrypotter.model.Magician
 import com.example.harrypotter.network.HarryPotterAPI
 import com.example.harrypotter.network.RetrofitService
 import com.example.harrypotter.utils.Constants
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,9 +34,6 @@ class MainActivity : AppCompatActivity() {
 
         //Transición de información entre activities.
         val bundle = intent.extras
-
-        //val data = ArrayList<Magician>()
-
 
         if (bundle != null) {
             //Se obtiene el valor de "students" ó "staff"
@@ -71,7 +71,10 @@ class MainActivity : AppCompatActivity() {
                     //Llenado de los datos del response.
                     binding.rvItems.layoutManager = LinearLayoutManager(this@MainActivity)
                     binding.rvItems.adapter = MagicianAdapter(this@MainActivity,
-                        response.body()!!)
+                        response.body()!!
+                    ) { characterSelected: Magician ->
+                        characterClick(characterSelected)
+                    }
                 }
 
                 //Función de conexión a la API no exitosa.
@@ -86,22 +89,15 @@ class MainActivity : AppCompatActivity() {
         } else {
             Log.d("LOGTAG", "No se recibió nada...")
         }
+        
+    }
+    
+    private  fun characterClick(magician: Magician) {
+        val bundle = Bundle()
+        bundle.putString("id", magician.id)
 
-
-
-
-
-        /*
-        for (i in 1 .. 10) {
-            val magicianTmp = Magician(i + Random.nextLong(1000),
-                "Personaje $i", "Actor $i", "PPPPPPPP")
-            data.add(magicianTmp)
-        }*/
-
-        //val my_adapter = Adapter(this, data)
-
-        //binding.rvItems.adapter = my_adapter
-
-
+        val intent = Intent(this, Details::class.java)
+        intent.putExtras(bundle)
+        startActivity(intent)
     }
 }

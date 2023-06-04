@@ -3,6 +3,7 @@ package com.example.harrypotter.adapters
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ExpandableListView.OnChildClickListener
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
@@ -10,8 +11,9 @@ import com.example.harrypotter.databinding.ItemCharacterBinding
 
 import com.example.harrypotter.model.Magician
 
-class MagicianAdapter(private var context: Context, private var magicians: ArrayList<Magician>):
-    RecyclerView.Adapter<MagicianAdapter.ViewHolder> (){
+class MagicianAdapter(private var context: Context, private var magicians: ArrayList<Magician>,
+    private val clickListener: (Magician) -> Unit):
+        RecyclerView.Adapter<MagicianAdapter.ViewHolder> (){
 
         //Clase para vincular el layout con la información de la API.
         class ViewHolder (view: ItemCharacterBinding): RecyclerView.ViewHolder(view.root) {
@@ -34,6 +36,7 @@ class MagicianAdapter(private var context: Context, private var magicians: Array
 
         holder.itemView.setOnClickListener {
             //Para programar los elementos click del elemento del ViewHolder completo.
+            clickListener(magicians[position])
         }
     }
 
