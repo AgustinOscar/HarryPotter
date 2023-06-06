@@ -10,8 +10,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_items"
-        android:layout_width="409dp"
-        android:layout_height="669dp"
+        android:layout_width="@dimen/widthRV"
+        android:layout_height="@dimen/heightRV"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

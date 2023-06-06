@@ -3,12 +3,9 @@ package com.example.harrypotter.adapters
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ExpandableListView.OnChildClickListener
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import com.example.harrypotter.databinding.ItemCharacterBinding
-
 import com.example.harrypotter.model.Magician
 
 class MagicianAdapter(private var context: Context, private var magicians: ArrayList<Magician>,
@@ -39,6 +36,4 @@ class MagicianAdapter(private var context: Context, private var magicians: Array
             clickListener(magicians[position])
         }
     }
-
-
 }

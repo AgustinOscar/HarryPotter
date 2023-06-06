@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HarryPotter</string>
+    <string name="title_app">Project 2</string>
+    <string name="version">Version 1.0.0</string>
+    <string name="selection">Select Guild</string>
+    <string name="type_student">Students</string>
+    <string name="type_staff">Hogwarts Staff</string>
+    <string name="character_name">Character Name</string>
+    <string name="actor_name">Actor Name</string>
+    <string name="alternativeNames">Alternetive Names</string>
+    <string name="house">House</string>
+    <string name="wizzard">Wizzard</string>
+    <string name="anioNacimiento">Year Of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="nameNull">Undefined Name</string>
+    <string name="alternativeNamesNull">No Alternative Names</string>
+    <string name="yearOfBirthNull">Year Not Recorded</string>
+    <string name="genericValueNull">Value Not Recorded</string>
+    <string name="actorNull">Actor Not Recorded</string>
+    <string name="genderNull">Undefined</string>
+    <string name="houseNull">Undefined House</string>
+    <string name="patronusNull">No Patronus</string>
+    <string name="wizzarValueYes">Yes</string>
+    <string name="wizzarValueNo">No</string>
+</resources>

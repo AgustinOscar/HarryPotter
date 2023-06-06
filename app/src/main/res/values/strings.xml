@@ -1,15 +1,35 @@
 <resources>
-    <string name="app_name">HarryPotter</string>
+    <string name="app_name" translatable="false">HarryPotter</string>
 
     <!--Información de la pantalla de inicio-->
     <string name="title_app">Proyecto 2</string>
     <string name="version">Versión 1.0.0</string>
-    <string name="author">Reyes González Agustín Óscar</string>
+    <string name="author" translatable="false">Reyes González Agustín Óscar</string>
 
     <!-- Instrucciones -->
     <string name="selection">Seleccione el tipo de personaje</string>
     <string name="type_student">Estudiantes</string>
-    <string name="type_staff">Staff Hogwarts</string>
+    <string name="type_staff">Staff  de Hogwarts</string>
+    <string name="character_name">Nombre Personaje</string>
+    <string name="actor_name">Nombre del actor</string>
+    <string name="alternativeNames">Nombres Alternativos</string>
+    <string name="house">Casa</string>
+    <string name="patronus" translatable="false">Patronus</string>
+    <string name="wizzard">Mago</string>
+    <string name="anioNacimiento">Año de Nacimiento</string>
+    <string name="gender">Género</string>
+
+    <!--Valores Nulos-->
+    <string name="nameNull">Nombre no registrado</string>
+    <string name="alternativeNamesNull">Sin nombres alternativos</string>
+    <string name="yearOfBirthNull">Año no registrado</string>
+    <string name="genericValueNull">Valor no registrado</string>
+    <string name="actorNull">Actor no registrado</string>
+    <string name="genderNull">No definido\n</string>
+    <string name="houseNull">Sin casa definida</string>
+    <string name="patronusNull">Sin patronus\n</string>
+    <string name="wizzarValueYes">Si\n</string>
+    <string name="wizzarValueNo">No\n</string>
 
 
 </resources>

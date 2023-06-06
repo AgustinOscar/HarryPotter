@@ -66,7 +66,6 @@ data class MagicianDetail(
     var alive: Boolean? = null,
 )
 
-
 data class Wand (
 
     @SerializedName("wood")
