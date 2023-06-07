@@ -11,6 +11,7 @@ import com.example.harrypotter.databinding.ActivityDetailsBinding
 import com.example.harrypotter.model.MagicianDetail
 import com.example.harrypotter.network.HarryPotterAPI
 import com.example.harrypotter.network.RetrofitService
+import com.makeramen.roundedimageview.RoundedImageView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -86,18 +87,28 @@ class Details : AppCompatActivity() {
                     else
                         binding.tvGenderValue.text = getString(R.string.genderNull)
 
+                    if (response.body()!![0].image != "") {
+                        Glide.with(this@Details)
+                            .load(response.body()!![0].image)
+                            .into(binding.ivImage)
+                    } else {
+                        Glide.with(this@Details)
+                            .load(response.body()!![0].image)
+                            .into(binding.ivImage)
+                    }
 
-                    Glide.with(this@Details)
-                        .load(response.body()!![0].image)
-                        .into(binding.ivImage)
+
+
 
                 }
 
                 override fun onFailure(call: Call<ArrayList<MagicianDetail>>, t: Throwable) {
                     binding.pbConexion.visibility = View.GONE
+                    Log.d("LOGTAG", "ID recibido: $id")
                     Toast.makeText(this@Details,
                         "No se puede consultar este personaje de momento",
                         Toast.LENGTH_LONG).show()
+                        finish()
                 }
 
             })

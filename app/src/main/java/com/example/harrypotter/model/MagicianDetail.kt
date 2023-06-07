@@ -47,8 +47,8 @@ data class MagicianDetail(
     @SerializedName("hairColour")
     var hairColour: String? = null,
 
-    @SerializedName("wand")
-    var wand: Wand? = Wand(),
+    //@SerializedName("wand")
+    //var wand: Wand? = Wand(),
 
     @SerializedName("patronus")
     var patronus: String? = null,
@@ -66,6 +66,7 @@ data class MagicianDetail(
     var alive: Boolean? = null,
 )
 
+/*
 data class Wand (
 
     @SerializedName("wood")
@@ -76,4 +77,4 @@ data class Wand (
 
     @SerializedName("length")
     var length : Int? = null
-)
+)*/
