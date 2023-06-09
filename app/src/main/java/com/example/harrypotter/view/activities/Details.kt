@@ -3,6 +3,7 @@ package com.example.harrypotter.view.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 import com.bumptech.glide.Glide
@@ -92,14 +93,8 @@ class Details : AppCompatActivity() {
                             .load(response.body()!![0].image)
                             .into(binding.ivImage)
                     } else {
-                        Glide.with(this@Details)
-                            .load(response.body()!![0].image)
-                            .into(binding.ivImage)
+                        Log.d("LOGTAG", "Intentando colocar una imagen")
                     }
-
-
-
-
                 }
 
                 override fun onFailure(call: Call<ArrayList<MagicianDetail>>, t: Throwable) {

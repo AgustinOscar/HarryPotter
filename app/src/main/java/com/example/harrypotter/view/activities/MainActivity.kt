@@ -67,7 +67,6 @@ class MainActivity : AppCompatActivity() {
                     Log.d("LOGTAG", "Respuesta del servidor: ${response.toString()}")
                     Log.d("LOGTAG", response.body().toString())
 
-
                     //Llenado de los datos del response.
                     binding.rvItems.layoutManager = LinearLayoutManager(this@MainActivity)
                     binding.rvItems.adapter = MagicianAdapter(this@MainActivity,
